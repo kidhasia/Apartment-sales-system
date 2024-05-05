@@ -43,11 +43,11 @@
                         </div>
                         <div class="input-group">
                             <label >Password</label>
-                            <input type="password" placeholder="Enter your password" name="passWord">
+                            <input type="password" placeholder="Enter your password" name="passWord" required>
                         </div>
                         <div class="input-group">
                             <label >Re-Enter Password</label>
-                            <input type="password" placeholder="Re-enter password"  name="passWord-2">
+                            <input type="password" placeholder="Re-enter password"  name="passWord2" required>
                         </div>
                         <div class="input-group">
                             <label>File</label>
