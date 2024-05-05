@@ -1,16 +1,23 @@
 <?php
-require_once '../config/db.php';
+require_once '../config/db.php'; 
 
+$status = $_POST["status"];
+$note = $_POST["notes"];
+$id = $_POST["id"];
 
-$user_message = $_POST["user_message"];
-
-
-$sql1 = "INSERT INTO message_controller (message) VALUES ('$user_message')";
-
-
-if ($conn->query($sql1)) {
-    echo "<script>alert('Insert Successful!');</script>";
-} else {
-    echo "Error: " . $conn->error;
+if (empty($status) || empty($note) || empty($id)) {
+    echo "Please input all required fields.";
+    exit(); 
 }
+
+$sql = "UPDATE `message_controller` SET note = '$note', status = '$status' WHERE message_id = $id";
+
+if ($conn->query($sql)) {
+    echo "Updated successfully!";
+} else {
+    echo "Not Updated: " . $conn->error;
+}
+
+$conn->close();
+
 ?>
