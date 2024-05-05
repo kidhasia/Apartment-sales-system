@@ -1,3 +1,5 @@
+
+<!-- Estabilishing a connection to MySQL database and chack wheather the connection was successfull  -->
 <?php
 
 $user = 'root';
