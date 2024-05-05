@@ -20,25 +20,18 @@ if($result->num_rows>0)
 }
 else{
     $sql= "INSERT INTO user (user_first_name, user_last_name,user_mail, user_password, profile_picture) VALUES ('$reg_firstname ','$reg_lastname ','$reg_email','$reg_password','$file_name')";
+    $result = $conn -> query($sql);
 
-
-$result = $conn -> query($sql);
-if($conn->query($sql))
-{
-    echo "<script> alert('Insert Successful!')</script>";
-    // header('location:#');//Re-direct to home
-}
-else{
-        echo "Error".$conn->error;
+    if($result){
+        echo "Successfull"; 
     }
-    
 }
 
 
     
-// if($result){
-//     echo "Insert Successful!";
-// }
+if($result){
+    echo "Insert Successful!";
+}
 
 
 $conn->close();
