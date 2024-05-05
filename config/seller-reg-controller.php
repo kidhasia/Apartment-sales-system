@@ -7,6 +7,7 @@ $reg_lastname = $_POST["last-name"];
 $reg_phone = $_POST["phoneNo"];
 $reg_email = $_POST["eMail"];
 $reg_password = $_POST["passWord"];
+$confirm_password = $_POST["passWord2"];
 $file_name = $reg_firstname.$reg_lastname;
 
 if ($reg_password !== $confirm_password) {
