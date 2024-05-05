@@ -1,0 +1,54 @@
+/* =======================================================
+                    Header classe
+======================================================= */
+
+@media (max-width: 768px) {
+
+    .header{
+        height: auto;
+    }
+
+    .header .container{
+        display: block;
+    }
+    
+    .header .header-main{
+        padding: 30px 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header #hambeger-menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .header .header-content{
+        display: none;
+        /* display: flex; */
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+        transition: all ease 400ms;
+    }
+    
+    .header .header-content a{
+        padding: 20px 0;
+        font-size: 1rem;
+    }
+    
+    .header .header-content a::before{
+        bottom: 0;
+    }
+    
+    .header .active-nav{
+        display: flex;
+    }
+
+    .border-btn{
+        width: 400px;
+        margin-top: 20px;
+    }
+
+}
