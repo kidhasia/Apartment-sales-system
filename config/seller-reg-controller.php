@@ -7,7 +7,15 @@ $reg_lastname = $_POST["last-name"];
 $reg_phone = $_POST["phoneNo"];
 $reg_email = $_POST["eMail"];
 $reg_password = $_POST["passWord"];
+$confirm_password = $_POST["passWord2"];
 $file_name = $reg_firstname.$reg_lastname;
+echo $reg_password;
+echo $confirm_password;
+
+if ($reg_password !== $confirm_password) {
+    echo "<script> alert('Passwords do not match'); window.history.back(); </script>";
+    exit(); 
+}
 
 $sql1="SELECT user_mail FROM user WHERE user_mail='$reg_email' ";
 $result=$conn->query($sql1);
