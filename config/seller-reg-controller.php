@@ -7,15 +7,9 @@ $reg_lastname = $_POST["last-name"];
 $reg_phone = $_POST["phoneNo"];
 $reg_email = $_POST["eMail"];
 $reg_password = $_POST["passWord"];
-$confirm_password = $_POST["passWord2"];
 $file_name = $reg_firstname.$reg_lastname;
-echo $reg_password;
-echo $confirm_password;
 
-if ($reg_password !== $confirm_password) {
-    echo "<script> alert('Passwords do not match'); window.history.back(); </script>";
-    exit(); 
-}
+echo $reg_firstname."<br>".$reg_lastname."<br>".$reg_phone."<br>".$reg_email;
 
 $sql1="SELECT user_mail FROM user WHERE user_mail='$reg_email' ";
 $result=$conn->query($sql1);
@@ -25,7 +19,7 @@ if($result->num_rows>0)
     echo "<script> alert('This mail is already used')</script>";
 }
 else{
-    $sql= "INSERT INTO user (user_first_name, user_last_name,user_mail, user_password, profile_picture ) VALUES ('$reg_firstname ','$reg_lastname ','$reg_email','$reg_password','$file_name')";
+    $sql= "INSERT INTO user (user_first_name, user_last_name,user_mail, user_password, profile_picture) VALUES ('$reg_firstname ','$reg_lastname ','$reg_email','$reg_password','$file_name')";
 
 
 $result = $conn -> query($sql);
@@ -42,9 +36,9 @@ else{
 
 
     
-if($result){
-    echo "Insert Successful!";
-}
+// if($result){
+//     echo "Insert Successful!";
+// }
 
 
 $conn->close();
