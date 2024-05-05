@@ -47,7 +47,7 @@
                         </div>
                         <div class="input-group">
                             <label >Re-Enter Password</label>
-                            <input type="password" placeholder="Re-enter password"  name="passWord-2">
+                            <input type="password" placeholder="Re-enter password"  name="passWord2">
                         </div>
                         <div class="input-group">
                             <label>File</label>
