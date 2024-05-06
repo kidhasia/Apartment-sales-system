@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Record</title>
-   
+    <style>
+        form{
+            display : flex;
+            flex-direction: column;
+
+        }
+    </style>
 </head>
 <body>
     <h1>Update Record</h1>
     
-    <form action="../../config/Delete-controller.php" method="post"> 
+    <form class = 'container' action="../../config/Delete-controller.php" method="post"> 
         
         <input type="hidden" name="id" value="12" > 
         
