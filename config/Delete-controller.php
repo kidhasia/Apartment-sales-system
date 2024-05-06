@@ -10,7 +10,7 @@ if (empty($status) || empty($note) || empty($id)) {
     exit(); 
 }
 
-$sql = "UPDATE `message_controller` SET note = '$note', status = '$status' WHERE message_id = $id";
+$sql = "UPDATE `message_controller` SET note = '$note', status = '$status' WHERE  = $id";
 
 if ($conn->query($sql)) {
     echo "Updated successfully!";
